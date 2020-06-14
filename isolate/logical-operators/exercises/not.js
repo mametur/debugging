@@ -3,7 +3,7 @@
 // write a function that behaves the same as !
 //  ... but doesn't use !
 function not(value) {
-
+	return !value;
 }
 
 const not1 = not(0);
