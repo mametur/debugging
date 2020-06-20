@@ -40,8 +40,8 @@ const returned7 = mystery(-1);
 const isTrue7 = returned7 === 1;
 console.assert(isTrue7, 'Test 7');
 
-const returned8 = mystery(true);
-const isTrue8 = returned8 === 'x cannot be a boolean';
+const returned8 = mystery('true');
+const isTrue8 = returned8 === _;
 console.assert(isTrue8, 'Test 8');
 
 const returned9 = mystery(1);
