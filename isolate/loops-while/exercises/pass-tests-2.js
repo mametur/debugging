@@ -1,18 +1,36 @@
 'use strict';
-
+debugger;
 function alternator(range, str1, str2) {
-  if (typeof range !== 'number') { throw new TypeError(); }
-  if (typeof str1 !== 'string') { throw new TypeError(); }
-  if (typeof str2 !== 'string') { throw new TypeError(); }
+	if (typeof range !== 'number') {
+		throw new TypeError();
+	}
+	if (typeof str1 !== 'string') {
+		throw new TypeError();
+	}
+	if (typeof str2 !== 'string') {
+		throw new TypeError();
+	}
 
-  while (_) {
+	let result = '';
+	let start_range = 0;
+	if (range % 2) {
+		while (start_range < Math.floor(range / 2)) {
+			result += `${str1}${str2}`;
+			start_range++;
+		}
+		result += str1;
+	} else {
+		while (start_range < range / 2) {
+			result += `${str1}${str2}`;
+			start_range++;
+		}
+	}
 
-  }
-
-  if (typeof result !== 'string') { throw new TypeError(); }
-  return result;
+	if (typeof result !== 'string') {
+		throw new TypeError();
+	}
+	return result;
 }
-
 
 const _1_expect = '_-_';
 const _1_actual = alternator(3, '_', '-');
@@ -37,5 +55,3 @@ console.assert(_5_actual === _5_expect, 'Test  5');
 const _6_expect = '#######';
 const _6_actual = alternator(7, '#', '#');
 console.assert(_6_actual === _6_expect, 'Test  6');
-
-
